@@ -16,8 +16,8 @@ export default function Hero() {
                 <div className="text-6xl lg:text-8xl">idiagi and sons</div>
                 <small className="text-lg lg:text-xl">Engineering and technical services</small>
             </section>
-            <section className="w-1/2">
-                <Canvas>
+            <section className="w-1/2 border-4 border-red-500 ">
+                <Canvas shadows>
                     <Scene />
                 </Canvas>
             </section>
