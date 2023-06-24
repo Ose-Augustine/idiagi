@@ -1,13 +1,10 @@
 import { motion } from "framer-motion"
-import { Canvas } from "@react-three/fiber"
-import { useLoader } from "@react-three/fiber"
-import { TextureLoader } from "three/src/loaders/TextureLoader"
+import { Canvas} from "@react-three/fiber"
+import Scene from "./Scene"
+import { useRef } from "react"
 
 export default function Hero() {
-    const [colorMap, roughnessMap] = useLoader(TextureLoader, [
-        'public/textures/coast_sand_rocks_02_diff_4k.jpg',
-        'public/textures/coast_sand_rocks_02_disp_4k.png',
-    ])
+    
     return (
         <motion.article
             className="bg-[#212121] h-screen text-white  flex justify-evenly w-screen"
@@ -21,20 +18,7 @@ export default function Hero() {
             </section>
             <section className="w-1/2">
                 <Canvas>
-                    <hemisphereLight 
-                        skyColor={'#ffffff'}
-                        groundColor={'#212121'}
-                        intensity= {0.8}
-                    />
-                    {/* <directionalLight color='red' position={[0,0,5]}/> */}
-                    <mesh>
-                        <sphereGeometry />
-                        <meshStandardMaterial 
-                            map={colorMap}
-                            bumpMap={colorMap}
-                            //displacementMap={colorMap}
-                        />
-                    </mesh>
+                    <Scene />
                 </Canvas>
             </section>
         </motion.article>
