@@ -1,7 +1,9 @@
 import { motion } from "framer-motion"
 import { Canvas} from "@react-three/fiber"
-import Scene from "./Scene"
+import { useFrame } from "@react-three/fiber"
 import { useRef } from "react"
+import Sphere from "./Sphere"
+import Particles from "./Particles"
 
 export default function Hero() {
     
@@ -18,7 +20,8 @@ export default function Hero() {
             </section>
             <section className="w-1/2 border-4 border-red-500 ">
                 <Canvas shadows>
-                    <Scene />
+                    <Sphere />
+                    <Particles />
                 </Canvas>
             </section>
         </motion.article>
