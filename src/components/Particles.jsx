@@ -1,7 +1,7 @@
 import * as THREE from "three"; 
 import { TextureLoader } from "three/src/loaders/TextureLoader"
 import { useLoader} from "@react-three/fiber"
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
 
@@ -25,9 +25,9 @@ function AddStar(props) {
 
 export default function Particles() {
     const ref = useRef(); 
-    useFrame(({ clock}) => {
+    useFrame(({ clock }) => {
         let time = clock.getDelta(); 
-        ref.current.rotation.x += time*10; 
+        ref.current.rotation.x += time*20; 
     })
     const texture = useLoader(TextureLoader, 'public/textures/coral_fort_wall_02_diff_4k.jpg')
     const stars = Array(500).fill()
