@@ -5,12 +5,8 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
 
-function AddStar() {
+function AddStar(props) {
     const [x, y ,z ] = Array(3).fill().map(()=> THREE.MathUtils.randFloatSpread(2))
-    const [texture] = useLoader(TextureLoader, [
-        'public/textures/coral_fort_wall_02_diff_4k.jpg'
-    ])
-    
     return (
         <>
             <mesh 
@@ -18,8 +14,8 @@ function AddStar() {
             >
                 <sphereGeometry args={[0.02,24,24]}/>
                 <meshStandardMaterial
-                    map={texture}
-                    bumpMap={texture}
+                    map={props.texture}
+                    bumpMap={props.texture}
                 />
             </mesh>
         
@@ -32,12 +28,13 @@ export default function Particles() {
     useFrame(({ clock}) => {
         ref.current.rotation.x *= clock.getDelta(); 
     })
+    const texture = useLoader(TextureLoader, 'public/textures/coral_fort_wall_02_diff_4k.jpg')
     const stars = Array(500).fill()
     let key = 0;
     return (
         <group ref={ref}>
             {
-                stars.map(() => (<AddStar key={key++} />))
+                stars.map(() => (<AddStar key={key++} texture={texture} />))
             }
         </group>
     )
