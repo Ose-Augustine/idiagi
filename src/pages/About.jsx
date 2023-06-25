@@ -2,6 +2,11 @@ import { motion } from "framer-motion";
 
 export default function About() {
      return (
-        <div>this is the about section</div>
+        <motion.div className="h-screen  bg-cover bg-left"
+        initial = {{opacity:0}}
+        style={{backgroundImage: "url('/skyscraper.jpg')"}}
+        animate = {{opacity:1}}
+        transition={{duration:0.75 , ease: "easeIn"}}
+        ></motion.div>
      )
 }

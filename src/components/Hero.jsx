@@ -10,8 +10,8 @@ export default function Hero() {
     return (
         <motion.article
             className="bg-[#212121] h-screen text-white  flex justify-evenly w-screen"
-            initial = {{y: "100%"}}
-            animate = {{y:"0%"}}
+            initial = {{opacity:0}}
+            animate = {{opacity:1}}
             transition={{duration:0.75 , ease: "easeIn"}}
         >
             <section className="py-56 w-1/2">
