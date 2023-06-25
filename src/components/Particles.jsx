@@ -26,16 +26,19 @@ function AddStar() {
         </>
     )
 }
-const stars = Array(500).fill().map(() => (<AddStar />))
 
 export default function Particles() {
     const ref = useRef(); 
     useFrame(({ clock}) => {
         ref.current.rotation.x *= clock.getDelta(); 
     })
+    const stars = Array(500).fill()
+    let key = 0;
     return (
         <group ref={ref}>
-            {stars}
+            {
+                stars.map(() => (<AddStar key={key++} />))
+            }
         </group>
     )
 }
