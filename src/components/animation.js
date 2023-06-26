@@ -3,18 +3,18 @@ export const container = {
     show: {
         opacity: 1, 
         transition: {
-            delayChildren: 0.5, 
+            delayChildren: 0.8, 
             staggerChildren: 0.2, 
         }, 
     }, 
 };
 
 export const items = {
-    hidden: {y: "100%"}, 
+    hidden: {opacity:0}, 
     show: {
-        y: "0%", 
+        opacity:1, 
         transition: {
-            duration: 0.5
+            duration: 0.5,
         }
     }
 };
