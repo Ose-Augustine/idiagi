@@ -29,7 +29,7 @@ export default function Particles() {
         let time = clock.getDelta(); 
         ref.current.rotation.x += time*20; 
     })
-    const texture = useLoader(TextureLoader, 'public/textures/coral_fort_wall_02_diff_4k.jpg')
+    const texture = useLoader(TextureLoader, '/textures/coral_fort_wall_02_diff_4k.jpg')
     const stars = Array(500).fill()
     let key = 0;
     return (

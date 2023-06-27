@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { container, itemsLeft, itemsRight } from "../components/animation";
+
 export default function About() {
      return (
         <motion.div className="h-screen  bg-cover bg-left flex flex-col justify-center lg:items-center"
@@ -26,7 +27,6 @@ export default function About() {
                     this is the name of the man since no lorem was found
                 </motion.div>
             </motion.div>
-
         </motion.div>
      )
 }

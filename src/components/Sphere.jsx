@@ -6,7 +6,7 @@ import { useRef } from "react"
 
 export default function Sphere() {
     const [colorMap] = useLoader(TextureLoader, [
-        'public/textures/coast_sand_rocks_02_diff_4k.jpg',
+        '/textures/coast_sand_rocks_02_diff_4k.jpg',
     ])
     const ref = useRef(); 
     const color = '#b78135'
