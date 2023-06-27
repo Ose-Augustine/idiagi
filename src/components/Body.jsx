@@ -14,7 +14,7 @@ export default function Body() {
     }, [inView])
   return (
     <article className="h-screen bg-orange-200 w-screen  text-[#212121] bg-center bg-cover">
-        <section className="border-2 border-black text-3xl text-center p-20 lg:p-40 bg-orange-200 ">
+        <section className="border-2 border-black text-3xl text-center p-20 lg:p-40 bg-orange-200 lg:text-6xl">
             We enrich human lives through the thoughtful application of design and technology
         </section>
         <motion.section
