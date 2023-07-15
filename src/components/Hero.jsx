@@ -14,14 +14,14 @@ export default function Hero() {
             animate = {{opacity:1}}
             transition={{duration:0.75 , ease: "easeIn"}}
         >
-            <section className="py-56 w-1/2">
-                <div className="text-6xl lg:text-8xl">idiagi and sons</div>
+            <section className="py-56 w-1/2 px-20">
+                <div className="text-6xl lg:text-8xl">idiagi & sons</div>
                 <small className="text-lg lg:text-xl">Engineering and technical services</small>
             </section>
             <section className="w-1/2">
                 <Canvas shadows>
                     <Sphere />
-                    <Particles />
+                    <Particles x={100} y={100}/>
                 </Canvas>
             </section>
         </motion.article>
